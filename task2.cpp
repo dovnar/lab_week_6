@@ -16,12 +16,14 @@ int main()
 	cout << "Игра «Угадай число»." "\n" "Программа загадывает число в диапазоне от 1 до 500. Попытайтесь его угадать""\n"
 		"в случае если надоело угадывать число выход = 0""\n""Удачи!!!";
 	int secret = rand() % 500 + 1;
-	unsigned int start_time = clock();
+	unsigned int startTime = clock();
+	// уменьшите отступ
 		do {
+		// увеличьте отступ внутри do-while
 		cout << "Угадай число (от 1 до 500): ";
 		cin >> entry;
 		if (entry < 0 ||
-			entry >500)
+			entry > 500)
 		{
 			cout << "Значение не является диапазоном поиска!!!\n";
 		}
@@ -39,8 +41,8 @@ int main()
 		}
 		go++;
 		} while (secret != entry);
-	unsigned int end_time = clock();
-	unsigned int search_time = end_time - start_time;
+	unsigned int endTime = clock();
+	unsigned int searchTime = endTime - startTime;
 	if (entry == 0)
 	{
 		cout << "Вы проиграли\n";
@@ -50,7 +52,7 @@ int main()
 		cout << "Мои поздравления!!!\n";
 	}
 	cout << "Вы потратили " << go << " попыток" "\n"
-		<< "и " << search_time/1000 << " секунд" "\n";
+		<< "и " << searchTime/1000 << " секунд" "\n";
 	return 0;
 }
 
