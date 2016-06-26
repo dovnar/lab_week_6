@@ -6,8 +6,8 @@ int main()
 {
 	setlocale(LC_ALL, "rus");
 
-	int width, length, line=1, symbol, rew=1;
-	char sing;
+	int width, length, line=1, symbol, rew=1; // row?
+	char sing; // sign?
 	
 	cout << "введите длину от 2 до 30 = ";
 	cin >> length;
@@ -28,9 +28,9 @@ int main()
 		return 1;
 	}
 
-	for (line; line <= length; line++)
+	for (; line <= length; line++)
 	{
-		for (symbol=1; symbol <= width; symbol++)
+		for (symbol = 1; symbol <= width; symbol++)
 		{
 			if (line == rew ||
 				line == length ||
